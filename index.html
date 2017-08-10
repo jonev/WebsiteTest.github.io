@@ -1,16 +1,11 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Starbuzz Coffee</title>
-		<style type="text/css">
-			body {
-					background-color: #d2b48c;
-					margin-left: 20%;
-					margin-right: 20%;
-					border: 2px dotted black;
-					padding: 10px 10px 10px 10px;
-					font-family: sans-serif;
-			}
-		</style>
+		<meta charset=UTF-8>
+		<link rel="stylesheet" href="myLoc.css">
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="javascript.js"></script>
 	</head>
 	<body>
 		<h1>Starbuzz Coffee Beverages</h1>
@@ -23,6 +18,15 @@
 		<h2>Chai Tea, $1.85</h2>
 		<p>A spicy drink made with black tea, spices, milk and honey.</p>
 		<P><a href="mission.html">Starbuzz's mission</a> </p>
+		<form>
+			<input type="text" id="txtSong" size="40" placeholder"Song name">
+			<input type="button" id="btnAdd" value="Add song">
+		</form>
+		<ul id="ulPlaylist">
+		
+		</ul>
+		<div id="map">
+		</div>
 	</body>
 	
 	
