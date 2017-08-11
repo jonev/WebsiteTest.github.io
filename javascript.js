@@ -2,7 +2,6 @@
 window.onload = function() {
 	var btnAdd = document.getElementById("btnAdd");
 	btnAdd.onclick = btnOnClick;
-	getMyGeoLocation();
 }
 
 function btnOnClick(){
@@ -20,22 +19,4 @@ function btnOnClick(){
 	var ul = document.getElementById("ulPlaylist");
 	ul.appendChild(li);
 }
-var map;
-function showMap(position){
-	var latlng =  new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-	var mapOptions = {
-		zoom: 15,
-		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
-	var mapdiv = document.getElementById("map");
-	map = new google.maps.Map(mapdiv, mapOptions);
-}
 
-function getMyGeoLocation(){
-	if(navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(showMap);
-	} else {
-		alert("Oops, no geolocation support");
-	}
-}
